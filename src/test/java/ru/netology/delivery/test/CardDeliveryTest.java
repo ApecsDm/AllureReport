@@ -37,7 +37,7 @@ public class CardDeliveryTest {
         $(byText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
         $("[data-test-id=success-notification] .notification__content").shouldHave(exactText("Встреча успешно запланирована на " + firstMeetingDate));
     }
-
+/*
     @Test
     @DisplayName("Should successful replan meeting")
     void shouldSuccessfulReplanMeeting() {
@@ -54,5 +54,5 @@ public class CardDeliveryTest {
         $("[data-test-id=replan-notification] button").click();
         $(byText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
     }
-
+ */
 }
