@@ -11,6 +11,7 @@ import java.time.Duration;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -34,7 +35,7 @@ public class CardDeliveryTest {
         $("[data-test-id=phone] input").setValue(validUser.getPhone());
         $("[data-test-id=agreement").click();
         $(byText("Запланировать")).click();
-        $(byText("Успешно!")).shouldBe(visible);;
+        $(withText("Успешно!")).shouldBe(visible);;
         $("[data-test-id=success-notification] div.notification__content").shouldHave(exactText("Встреча успешно запланирована на " + firstMeetingDate));
     }
 
