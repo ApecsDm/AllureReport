@@ -52,7 +52,7 @@ public class CardDeliveryTest {
         $("[data-test-id=success-notification] .notification__content").shouldHave(exactText("Встреча успешно запланирована на " + firstMeetingDate));
         $(byText("Запланировать")).click();
         $("[data-test-id=replan-notification] button").click();
-        $("[data-test-id='success-notification'] div.notification__title").shouldHave(exactText("Успешно!"));
+        $(byText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
     }
 
 }

@@ -38,7 +38,7 @@ public class DataGenerator {
     }
 
     public static String generateName() {
-        return faker.name().firstName() + " " + faker.name().lastName();
+        return faker.name().lastName() + " " + faker.name().firstName();
     }
 
     public static String generatePhone() {
